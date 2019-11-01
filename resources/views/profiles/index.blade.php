@@ -7,8 +7,9 @@
             <img src="https://instagram.fvlc1-2.fna.fbcdn.net/vp/535e8d194fdbfc357ad03257c95212a3/5E5AF927/t51.2885-19/s320x320/70985486_577637296311063_2240788552625422336_n.jpg?_nc_ht=instagram.fvlc1-2.fna.fbcdn.net" class="rounded-circle" style="width: 100%; height: auto;">
         </div>
         <div class="col-9 pt-5">
-            <div>
+            <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{ $user->username }}</h1>
+                <a href="#">Add New Post</a>
             </div>
             <div class="d-flex">
                 <div class="pr-5"><strong>153</strong> posts</div>
