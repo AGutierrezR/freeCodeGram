@@ -15,7 +15,7 @@ class PostController extends Controller
     {   
         $data = request()->validate([
             'caption' => 'required',
-            'image' => 'required'
+            'image' => ['required', 'image']
         ]);
         dd(request()->all());
     }
