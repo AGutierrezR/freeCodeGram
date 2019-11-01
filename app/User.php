@@ -38,8 +38,15 @@ class User extends Authenticatable
     ];
 
     // Creando una relacion inversa con profile
+    public function posts()
+    {
+        return $this->hasMaby(Post::Class);
+    }
+    
+    // Creando una relacion inversa con profile
     public function profile()
     {
         return $this->hasOne(Profile::Class);
     }
+
  }
