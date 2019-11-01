@@ -36,4 +36,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-}
+
+    // Creando una relacion inversa con profile
+    public function profile()
+    {
+        return $this->hasOne(Profile::Class);
+    }
+ }
