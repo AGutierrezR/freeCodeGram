@@ -40,7 +40,7 @@ class User extends Authenticatable
     // Creando una relacion inversa con profile
     public function posts()
     {
-        return $this->hasMaby(Post::Class);
+        return $this->hasMany(Post::Class);
     }
     
     // Creando una relacion inversa con profile
