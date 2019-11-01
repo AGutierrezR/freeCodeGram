@@ -40,7 +40,7 @@ class User extends Authenticatable
     // Creando una relacion inversa con profile
     public function posts()
     {
-        return $this->hasMany(Post::Class);
+        return $this->hasMany(Post::Class)->orderBy('created_at', 'DESC');
     }
     
     // Creando una relacion inversa con profile
