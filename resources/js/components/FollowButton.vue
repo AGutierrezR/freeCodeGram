@@ -17,7 +17,7 @@
             followUser() {
                 axios.post(`/follow/${this.userId}`)
                     .then(res => {
-                        alert(res.data);
+                        console.log(res.data);
                     });
             }
         }
