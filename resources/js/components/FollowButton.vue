@@ -1,16 +1,23 @@
 <template>
     <div>
         <button class="btn btn-primary ml-4"
-        @click="followUser">Follow</button>
+        @click="followUser"
+        v-text="buttonText"></button>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['userId'],
+        props: ['userId', 'follows'],
 
         mounted() {
             console.log('Component mounted.')
+        },
+
+        data: function() {
+            return {
+                status: this.follows
+            }
         },
 
         methods: {
@@ -19,6 +26,12 @@
                     .then(res => {
                         console.log(res.data);
                     });
+            }
+        },
+
+        computed: {
+            buttonText() {
+                return (this.status) ? 'Unfollow' : 'Follow';
             }
         }
     }
