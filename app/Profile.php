@@ -13,4 +13,10 @@ class Profile extends Model
     {
         return $this->belongsTo(User::Class);
     }
+
+    public function profileImage() 
+    {
+        $imagePath = ($this->image) ? '/storage/' . $this->image : 'https://opticacano.es/wp-content/uploads/sites/88/2019/01/blank-profile-picture-973460.png';
+        return $imagePath;
+    }
 }
