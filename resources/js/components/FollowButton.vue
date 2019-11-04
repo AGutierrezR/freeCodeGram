@@ -24,6 +24,7 @@
             followUser() {
                 axios.post(`/follow/${this.userId}`)
                     .then(res => {
+                        this.status = !this.status;
                         console.log(res.data);
                     });
             }

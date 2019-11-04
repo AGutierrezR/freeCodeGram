@@ -1858,7 +1858,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     followUser: function followUser() {
+      var _this = this;
+
       axios.post("/follow/".concat(this.userId)).then(function (res) {
+        _this.status = !_this.status;
         console.log(res.data);
       });
     }
